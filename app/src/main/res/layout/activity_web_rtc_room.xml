@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2020 xuexiangjys(xuexiangjys@163.com)
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/LocalSurfaceView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/RemoteSurfaceView"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="16dp" />
+
+    <TextView
+        android:id="@+id/LogcatView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_margin="5dp"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/StartCallButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/startcall_button_selector"
+        android:onClick="onClickStartCallButton" />
+
+    <Button
+        android:id="@+id/EndCallButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/endcall_btn_selector"
+        android:onClick="onClickEndCallButton"
+        android:visibility="gone" />
+
+</FrameLayout>
